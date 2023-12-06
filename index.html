@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Books</title>
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/massiv.js"></script><!--Массив данных-->
+	<style>
+	.left{
+		width: 400px; float: left;
+	}
+	.right{
+		width: 600px; margin-left: 600px; min-height: 800px;
+	}
+	p {
+  		font-family: Georgia, 'Times New Roman', Times, serif;
+	}
+	</style>
+	<button id='button'>Поменяй цвет фона</button>
+<script>
+const button = document.getElementById('button');
+const rainbow = ['orange', 'LightSalmon', 'grey',  'palegreen'];
+
+function changeBackground(){
+	document.body.style.background = rainbow[Math.floor(7 * Math.random())];	
+}
+
+button.addEventListener('click', changeBackground);
+</script>
+</head>
+<body>
+<h2><a href="index.html"> JS books </a></h2>
+<div>
+	<div class="left">
+		<ul type="square" id="menu"></ul>	
+	</div>	
+	<div class="left" id="content">
+		<img src="images/jstitul.jpeg">
+	</div>
+</div>
+<script src="js/myScript.js"></script><!--скрипт обработки массива-->	
+</body>
+</html>
+
+
